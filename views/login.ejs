@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Main Page</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        /* Remove the spinner (up/down arrows) from number input fields */
+        input[type="number"]::-webkit-outer-spin-button,
+        input[type="number"]::-webkit-inner-spin-button {
+            -webkit-appearance: none;
+            margin: 0;
+        }
+        
+        input[type="number"] {
+            -moz-appearance: textfield;
+        }
+    </style>
+</head>
+<body>
+    <div class="w-full min-h-screen bg-zinc-900 text-white p-10 flex justify-center items-center">
+        <div class="w-full max-w-md">
+            <h3 class="text-3xl mb-5 text-center">Login Your Account</h3>
+            <form action="/login" method="post" class="space-y-4">
+                <input class="w-full px-3 py-2 outline-none bg-transparent border-2 border-zinc-800 rounded-md" type="email" placeholder="Email" name="email">
+                <input class="w-full px-3 py-2 outline-none bg-transparent border-2 border-zinc-800 rounded-md" type="password" placeholder="Password" name="password">
+                <div class="flex justify-end">
+                    <a class="text-blue-400 hover:text-blue-600 text-sm" href="/forgot-password">Forgot Password?</a>
+                </div>
+                <a class="text-blue-400 hover:text-blue-600 text-sm" href="/">Create new account</a>
+
+                <input class="w-full px-5 py-2 bg-blue-500 rounded-md" type="submit" value="Login Account">
+            </form>
+        </div>
+    </div>
+</body>
+</html>
